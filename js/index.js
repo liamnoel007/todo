@@ -28,3 +28,13 @@ btn.addEventListener('click', () => {
     addTask();
   }
 });
+
+tasks.addEventListener('click', (e) => {
+  if (e.target.type === 'checkbox') {
+    tasksArr[e.target.id].completed = !tasksArr[e.target.id].completed;
+  } else if (e.target.className === 'delete-btn') {
+    console.log(e.target.id[0]);
+    tasksArr.splice(e.target.id[0], 1);
+  }
+  displayTasks();
+});
