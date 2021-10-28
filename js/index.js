@@ -36,5 +36,5 @@ tasks.addEventListener('click', (e) => {
     console.log(e.target.id[0]);
     tasksArr.splice(e.target.id[0], 1);
   }
-  displayTasks();
+  addTask();
 });
