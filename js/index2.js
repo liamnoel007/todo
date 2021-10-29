@@ -2,10 +2,7 @@ let input = document.querySelector('#input');
 let addTask = document.querySelector('#addBtn');
 let tasks = document.querySelector('#tasks');
 
-let tasksArray = [
-  { text: 'Купить пиццу', completed: true },
-  { text: '12', completed: true },
-];
+let tasksArray = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
 
 function displayTasks() {
   tasks.innerHTML = '';
@@ -19,6 +16,8 @@ function displayTasks() {
     </div>
   </div>`;
   });
+
+  localStorage.setItem('tasks', JSON.stringify(tasksArray));
 }
 
 displayTasks();
