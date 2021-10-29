@@ -23,8 +23,12 @@ function displayTasks() {
 displayTasks();
 
 addTask.addEventListener('click', () => {
-  tasksArray.push({ text: input.value, completed: false });
-  displayTasks();
+  if (input.value.length < 1) {
+    alert('Вы не ввели задачу');
+  } else {
+    tasksArray.push({ text: input.value, completed: false });
+    displayTasks();
+  }
 });
 
 tasks.addEventListener('click', (e) => {
