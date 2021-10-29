@@ -109,3 +109,17 @@ body {
   background-color: rgb(248, 242, 232);
   border: 1px solid rgba(255, 255, 255, 1);
 }
+
+.countMain {
+  width: 400px;
+}
+
+.count {
+  width: 30px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  background-color: rgba(255, 243, 231, 0.3);
+  box-shadow: inset 6px 5px 5px rgba(145, 111, 77, 0.2), 3px 3px 25px rgba(255, 255, 255, 0.8);
+}
