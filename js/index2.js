@@ -40,8 +40,8 @@ tasks.addEventListener('click', (e) => {
   if (e.target.type === 'checkbox') {
     tasksArray[e.target.id].completed = !tasksArray[e.target.id].completed;
   } else if (e.target.className === 'delete-btn') {
-    console.log(e.target.id[0]);
     tasksArray.splice(e.target.id[0], 1);
+    count1.value -= 1;
   }
   displayTasks();
 });
